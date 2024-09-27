@@ -91,7 +91,28 @@ public class Ejercicios {
 
     }
     public static void ejer6(){
-        
+        //1. Permítase introducir el valor con IVA de una compra con dos decimales (la compra no puede ser superior a 500€ ni inferior a 0€)
+        // y el valor del IVA de dicha compra (valor entero entre 0 y 25%).¿Cuánto costó la compra sin IVA?¿Cuánto fue el IVA?
+        // Muéstrese los resultados redondeados a dos decimales. (Compra)
+
+        //*ENTRADA/SALIDA*
+        //Valor de la compra (entre 0.00 y 500.00):**298,45**
+        //IVA (entre 0 y 25%):**12**
+        //Compra: 266.47
+        //IVA: 31.98
+        //======
+        //298.45
+
+        System.out.println("Valor de la compra (entre 0.00 y 500.00): ");
+        float valor = teclado.nextFloat();
+        System.out.println("IVA (entre 0 y 25%): ");
+        float iva = teclado.nextFloat();
+        float porcen = iva /100;
+        float compra =  porcen* valor;
+        float compraFinal = valor- compra;
+        System.out.printf("Compra: %.2f\n", compraFinal);
+        System.out.printf("IVA : %.2f", compra);
+
     }
 }
 
