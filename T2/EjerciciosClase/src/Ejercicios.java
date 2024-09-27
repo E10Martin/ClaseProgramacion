@@ -109,6 +109,7 @@ public class Ejercicios {
         float iva = teclado.nextFloat();
         float porcen = iva /100;
         float compra =  porcen* valor;
+        // hacerlo en un paso; valor * ((float) iva/100)
         float compraFinal = valor- compra;
         System.out.printf("Compra: %.2f\n", compraFinal);
         System.out.printf("IVA : %.2f", compra);
