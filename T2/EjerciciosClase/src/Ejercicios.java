@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Ejercicios {
       static Scanner teclado = new Scanner(System.in);
     public static void main(String[] args){
-    ejer5();
+    ejer6();
     }
     public static void ejer1(){
      final String nombre = "Luis González Sanz ";
@@ -79,6 +79,19 @@ public class Ejercicios {
     }
     public static void ejer5(){
 
+        System.out.println("Introduce el numero de segundos; ");
+         int seg = teclado.nextInt();
+        int h = seg/3600;
+       System.out.println("Horas; "+ h);
+        int segundosRestantes = seg%3600;
+        int min = segundosRestantes/60;
+        System.out.println("Minutos; "+ min);
+        int s = segundosRestantes%60;
+        System.out.println("Segundos; "+s);
+
+    }
+    public static void ejer6(){
+        
     }
 }
 
