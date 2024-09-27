@@ -3,9 +3,7 @@ import java.util.Scanner;
 public class Ejercicios {
       static Scanner teclado = new Scanner(System.in);
     public static void main(String[] args){
-     ejer1();
-     ejer2();
-     ejer3();
+    ejer5();
     }
     public static void ejer1(){
      final String nombre = "Luis González Sanz ";
@@ -58,4 +56,29 @@ public class Ejercicios {
         System.out.println("El resultado resto es "+resultado2);
 
     }
+
+    public static void ejer4() {
+
+        double bebidas = 1.25;
+        double bocadillos = 2.05;
+        System.out.println("Cuantas bebidas quieres;");
+         int n1 = teclado.nextInt();
+        System.out.println("Cuantos bocadillos quieres;");
+        int  n2 = teclado.nextInt();
+
+        float resultado;
+        resultado = (float) bebidas*n1;
+        System.out.println("Coste bebidas "+ resultado);
+        float resultado2;
+        resultado2 = (float) bocadillos*n2;
+        System.out.println("Coste bocadillos "+ resultado2);
+        float consumicion;
+        consumicion = (float) resultado+resultado2;
+        System.out.println("Coste consumicion "+ consumicion);
+
+    }
+    public static void ejer5(){
+
+    }
 }
+
