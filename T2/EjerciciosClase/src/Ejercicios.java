@@ -3,7 +3,12 @@ import java.util.Scanner;
 public class Ejercicios {
       static Scanner teclado = new Scanner(System.in);
     public static void main(String[] args){
-    ejer6();
+    //ejer1();
+    //ejer2();
+    //ejer3();
+    //ejer4();
+    //ejer5();
+    //ejer6();
     }
     public static void ejer1(){
      final String nombre = "Luis González Sanz ";
