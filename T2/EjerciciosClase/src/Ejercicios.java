@@ -9,6 +9,8 @@ public class Ejercicios {
     //ejer4();
     //ejer5();
     //ejer6();
+       // ejer11();
+        ejer12();
     }
     public static void ejer1(){
      final String nombre = "Luis González Sanz ";
@@ -118,6 +120,45 @@ public class Ejercicios {
         float compraFinal = valor- compra;
         System.out.printf("Compra: %.2f\n", compraFinal);
         System.out.printf("IVA : %.2f", compra);
+
+    }
+    public static void ejer11(){
+        //1. Hágase una aplicación que lea un entero entre 0 y 100. Compruébese (mostrándose verdadero o falso) las siguientes condiciones:
+        //a) Es par
+        //b) Es mayor que 50
+        //(CompararEntero)
+        //*ENTRADA/SALIDA*
+        //Escribe un entero entre 0 y 100: **55**
+        //Par: false
+        //Mayor que 50: true
+        System.out.println("Escribe un entero entre 0 y 100: ");
+        int num = teclado.nextInt();
+        boolean par = (num%2)==0;
+        System.out.println("Par: "+ par);
+        par =  num > 50;
+        System.out.println("Mayor que 50: "+par);
+    }
+    public static void ejer12(){
+        //1. Hágase una aplicación que lea dos cadenas y las compare del siguiente modo:
+        //a) Son iguales
+        //b) La primera es menor que la segunda
+        //c) Son distintas
+        //(CompararCadenas)
+        //*ENTRADA/SALIDA*
+        //Escribe una palabra: **hola**
+        //Escribe una palabra: **adios**
+        //Son iguales: false
+        //La primera es menor que la segunda: false
+        //Son distintas: true
+        System.out.println("EScribe una palabra: ");
+        String p1 = teclado.next();
+        System.out.println("EScribe una palabra: ");
+        String p2 = teclado.next();
+        boolean comprobar = p1.equalsIgnoreCase(p2);
+        System.out.println("Son iguales: "+ comprobar);
+        comprobar = !p2.equalsIgnoreCase(p1) ;
+        System.out.println("Son distintas: "+comprobar);
+
 
     }
 }
