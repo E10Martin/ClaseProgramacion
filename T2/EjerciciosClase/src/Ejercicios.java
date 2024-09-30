@@ -9,8 +9,9 @@ public class Ejercicios {
     //ejer4();
     //ejer5();
     //ejer6();
-       // ejer11();
-        ejer12();
+        //ejer11();
+       //ejer12();
+        //ejer13();
     }
     public static void ejer1(){
      final String nombre = "Luis González Sanz ";
@@ -158,8 +159,33 @@ public class Ejercicios {
         System.out.println("Son iguales: "+ comprobar);
         comprobar = !p2.equalsIgnoreCase(p1) ;
         System.out.println("Son distintas: "+comprobar);
+        int nump1 = p1.length();
+        int nump2 = p2.length();
+        boolean comparar = nump1 < nump2;
+        System.out.println("La primera es menor que la segunda: "+comparar);
 
-
+    }
+    public static void ejer13(){
+        //a) El primero es par y el segundo impar
+        //b) El primero es superior al doble del segundo e inferior a 8
+        //c) Son iguales o la diferencia entre el primero y el segundo es menor que 2
+        //(CompararEnteros)
+        //*ENTRADA/SALIDA*
+        //Escribe un número entre 0 y 9: **4**
+        //Escribe un número entre 0 y 9: **7**
+        //El primero es par y el segundo impar: true
+        //El primero es superior al doble del segundo e inferior a 8: false
+        //Son iguales o la diferencia entre el primero y el segundo es menor que 2: true
+        System.out.println("Escribe un numero entre 0 y 9: ");
+        int n1 = teclado.nextInt();
+        System.out.println("Escribe un numero entre 0 y 9: ");
+        int n2 = teclado.nextInt();
+        boolean comparar = (n1%2 == 0) && !(n2%2 == 0);
+        System.out.println("El primero es par y el segundo impar: "+ comparar);
+        boolean comparar1 = n1>(2*n2) && n1<8;
+        System.out.println("El primero es superior al doble del segundo e inferior a 8: "+ comparar1);
+        boolean comparar2 = n1 == n2 || (n1 - n2)<2;
+        System.out.println("Son iguales o la diferencia entre el primero y el segundo es menor que 2: "+ comparar2);
     }
 }
 
