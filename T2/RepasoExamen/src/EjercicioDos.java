@@ -8,7 +8,7 @@ public class EjercicioDos {
     public static void main(String[] args) {
         //Jugador 1
         System.out.println("Nombre: ");
-        String nombre1 = teclado.nextLine();
+        String nombre1 = teclado.next();
         System.out.println("Numero jugadores: ");
         int numJugadores1 = teclado.nextInt();
         System.out.println("Presupuesto: ");
@@ -16,7 +16,7 @@ public class EjercicioDos {
 
         //Jugador 2
         System.out.println("Nombre: ");
-        String nombre2 = teclado.nextLine();
+        String nombre2 = teclado.next();
         System.out.println("Numero jugadores: ");
         int numJugadores2 = teclado.nextInt();
         System.out.println("Presupuesto: ");
@@ -24,7 +24,7 @@ public class EjercicioDos {
 
         //Jugador 3
         System.out.println("Nombre: ");
-        String nombre3 = teclado.nextLine();
+        String nombre3 = teclado.next();
         System.out.println("Numero jugadores: ");
         int numJugadores3 = teclado.nextInt();
         System.out.println("Presupuesto: ");
@@ -42,10 +42,6 @@ public class EjercicioDos {
         System.out.println("3.El tercer participante tiene resupuesto positivo: "+ j3);
         boolean total = (numJugadores1==0 && numJugadores2==0 && numJugadores3==0) && (presu1>=0 && presu2>=0 && presu3>=0);
         System.out.println("4.La liga está preparada para empezar: "+ total);
-
-
-
-
 
     }
 }
