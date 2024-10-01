@@ -24,6 +24,7 @@ public class EjercicioUno {
         System.out.printf("Hola %s tu IMC"+" teniendo en cuenta tu altura de %.2fcm y tu peso de %.2fkg, tiene" +
                 "un valor de %.2f", nombre, altura, peso,imc);
 
+
     }
     public static float calculoIMC(float peso, float altura){
         return (float) (peso / Math.pow(altura,2));
