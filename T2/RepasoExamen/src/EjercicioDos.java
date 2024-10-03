@@ -40,7 +40,7 @@ public class EjercicioDos {
         System.out.println("2.El segundo participante tiene jugadores pares: "+ j2);
         boolean j3 =presu3>=0 ;
         System.out.println("3.El tercer participante tiene resupuesto positivo: "+ j3);
-        boolean total = (numJugadores1==0 && numJugadores2==0 && numJugadores3==0) && (presu1>=0 && presu2>=0 && presu3>=0);
+        boolean total = (numJugadores1==11 && numJugadores2==11 && numJugadores3==11) && (presu1>=0 && presu2>=0 && presu3>=0);
         System.out.println("4.La liga está preparada para empezar: "+ total);
 
     }
