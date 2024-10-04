@@ -54,7 +54,7 @@ public class Ejer1 {
         }else if (a<1000){
             System.out.println();
         }
-        
+
     }
 
 }
