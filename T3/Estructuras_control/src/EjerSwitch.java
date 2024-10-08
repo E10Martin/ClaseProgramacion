@@ -4,7 +4,8 @@ public class EjerSwitch {
     static Scanner teclado = new Scanner(System.in);
     public static void main(String[] args) {
         //ejer1();
-        ejer2();
+        //ejer2();
+        ejer4();
     }
     public static void ejer1(){
         //Escribe un programa en Java que solicite al usuario ingresar un número del 1 al 7 y
@@ -44,17 +45,9 @@ public class EjerSwitch {
         char palabra = teclado.next().charAt(0);
         switch (palabra) {
             case 'a' ,'A':
-                System.out.println("Vocal");
-                break;
             case 'e' ,'E':
-                System.out.println("Vocal");
-                break;
             case 'i' ,'I':
-                System.out.println("Vocal");
-                break;
             case 'o' ,'O':
-                System.out.println("Vocal");
-                break;
             case 'u' ,'U':
                 System.out.println("Vocal");
                 break;
@@ -64,4 +57,35 @@ public class EjerSwitch {
         }
 
     }
+    public static void ejer3(){
+
+
+    }
+    public static void ejer4(){
+        //Realiza un programa que solicite al usuario ingresar un mes (como un número del 1 al 12)
+        // y muestre la cantidad de días que tiene ese mes, considerando años no bisiestos.
+        System.out.println("Ingresa un mes(con un numero del 1 al 12);");
+        String mes = teclado.next();
+        switch (mes.toLowerCase()){
+            case "marzo":
+            case "abril":
+            case "mayo":
+            case "junio":
+            case "enero":
+            case "julio":
+            case "agosto":
+            case "septiembre":
+            case "octubre":
+            case "nomviembre":
+            case "diciembre":
+                System.out.println("Tienes 30 dias");
+                break;
+            case "febrero":
+                System.out.println("Febrero 29 dias");
+                break;
+            default:
+                System.out.println("Se serio anda");
+        }
+    }
+
 }
