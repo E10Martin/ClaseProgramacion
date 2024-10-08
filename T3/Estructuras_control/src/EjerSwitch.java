@@ -5,7 +5,8 @@ public class EjerSwitch {
     public static void main(String[] args) {
         //ejer1();
         //ejer2();
-        ejer4();
+        ejer3();
+        //ejer4();
     }
     public static void ejer1(){
         //Escribe un programa en Java que solicite al usuario ingresar un número del 1 al 7 y
@@ -58,8 +59,17 @@ public class EjerSwitch {
 
     }
     public static void ejer3(){
-
-
+        //Desarrolla un programa que reciba un número entero y, utilizando una sentencia switch, determine si es par o impar.
+        System.out.println("Dame un numero entero;");
+        int n1 = teclado.nextInt();
+        int n2 = n1%2;
+        switch (n2){
+            case 0:
+                System.out.println("Es par");
+                break;
+            default:
+                System.out.println("Es impar");
+        }
     }
     public static void ejer4(){
         //Realiza un programa que solicite al usuario ingresar un mes (como un número del 1 al 12)
