@@ -10,6 +10,8 @@ public class EjerSwitch {
         //ejer4();
         //ejer5();
         //ejer7();
+        //ejer8();
+        //ejer9();
     }
 
     public static void ejer1() {
@@ -175,16 +177,55 @@ public class EjerSwitch {
     }
 
     public static void ejer8() {
-        System.out.println("Introduce un caracter (+, -, *, /)");
-        char caracter = teclado.next().charAt(0);
         System.out.println("Introduce un numero");
         int n2 = teclado.nextInt();
         System.out.println("Introduce un numero");
         int n3 = teclado.nextInt();
+        System.out.println("Introduce un caracter (+, -, *, /)");
+        char caracter = teclado.next().charAt(0);
 
         switch (caracter) {
-            case +:
+            case '+':
+                int total = n3 + n2;
+                System.out.printf("La suma de: %d + %d = %d", n2, n3, total);
+                break;
+            case '-':
+                int total1 = n3 - n2;
+                System.out.printf("La suma de: %d - %d = %d", n2, n3, total1);
+                break;
+            case '*':
+                int total2 = n3 * n2;
+                System.out.printf("La multiplicacion de: %d * %d = %d", n2, n3, total2);
+                break;
+            case '/':
+                int total3 = n3 / n2;
+                System.out.printf("La division de: %d / %d = %d", n2, n3, total3);
+                break;
+            default:
+                System.out.println("Non caracter foound\n" + "Ponlo bien goofy");
 
+
+        }
+    }
+
+    public static void ejer9() {
+        System.out.println("Introduce un numero(1 al 12):");
+        int n1 = teclado.nextInt();
+        switch (n1) {
+            case 1, 2, 3:
+                System.out.println("Invierno");
+                break;
+            case 4,5,6:
+                System.out.println("Primavera");
+                break;
+            case 7,8,9:
+                System.out.println("Verano");
+                break;
+            case 10,11,12:
+            System.out.println("Otoño");
+                break;
+            default:
+                System.out.println("Ponlo bien");
 
         }
     }
