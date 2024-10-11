@@ -261,7 +261,8 @@ public class EjerSwitch {
         switch (caracteres){
             //Producto 1
             case "#ep002":
-                System.out.println("Producto 1");
+                System.out.println("Producto 1\n Cuesta 500 euros");
+
                 break;
             default:
                 System.out.println("No encuentro el producto");
