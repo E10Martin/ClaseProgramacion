@@ -9,9 +9,11 @@ public class EjerSwitch {
         //ejer3();
         //ejer4();
         //ejer5();
+        //ejer6();
         //ejer7();
         //ejer8();
         //ejer9();
+        ejer10();
     }
 
     public static void ejer1() {
@@ -152,6 +154,28 @@ public class EjerSwitch {
         }
     }
 
+    public static void ejer6() {
+        System.out.println("Introduce una opcion(1 al 4):");
+        int n = teclado.nextInt();
+
+        switch (n) {
+            case 1:
+                System.out.println("Opcion 1");
+                break;
+            case 2:
+                System.out.println("Opcion 2");
+                break;
+            case 3:
+                System.out.println("Opcion 3");
+                break;
+            case 4:
+                System.out.println("Opcion 4");
+                break;
+            default:
+                System.out.println("He dicho del 1 al 4 retra.");
+        }
+    }
+
     public static void ejer7() {
         System.out.println("Introduce un numero del 1 al 5");
         int n1 = teclado.nextInt();
@@ -215,19 +239,35 @@ public class EjerSwitch {
             case 1, 2, 3:
                 System.out.println("Invierno");
                 break;
-            case 4,5,6:
+            case 4, 5, 6:
                 System.out.println("Primavera");
                 break;
-            case 7,8,9:
+            case 7, 8, 9:
                 System.out.println("Verano");
                 break;
-            case 10,11,12:
-            System.out.println("Otoño");
+            case 10, 11, 12:
+                System.out.println("Otoño");
                 break;
             default:
                 System.out.println("Ponlo bien");
 
         }
     }
+
+    public static void ejer10(){
+        System.out.println("Introduce un codigo de producto: ");
+        String caracteres = teclado.next();
+
+        switch (caracteres){
+            //Producto 1
+            case "#ep002":
+                System.out.println("Producto 1");
+                break;
+            default:
+                System.out.println("No encuentro el producto");
+
+        }
+    }
+
 
 }
