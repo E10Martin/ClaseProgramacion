@@ -7,7 +7,8 @@ public class EjerFor {
         //ejer1();
         //ejer3();
         //ejer4();
-        ejer5();
+        //ejer5();
+        ejer6();
     }
     public static void ejer1(){
         //Se leerá el número de temperaturas a introducir (de ser 0 o negativo se establecerá a 10).
@@ -71,6 +72,16 @@ public class EjerFor {
             }
         }
         System.out.printf("Base; %d     Exponente; %d     Resultado; %d",base, exponente, total);
+
+    }
+    public static void ejer6(){
+        //Mostrar todos los números pares comprendidos entre dos dados. (ParesEntreDosDados)
+        System.out.println("Numero");
+        int inicio = teclado.nextInt();
+        System.out.println("Numero");
+        int fin = teclado.nextInt();
+
+        
 
     }
 
