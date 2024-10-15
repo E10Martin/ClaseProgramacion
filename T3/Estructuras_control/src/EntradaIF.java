@@ -14,9 +14,16 @@ public class EntradaIF {
         //contiene
         boolean contiene = p1.contains("que");
         //cuantas letras hay
-        p1.length();    
+        p1.length();
         //sacar una letra de una palabra
         p1.charAt(0);
+        //sacar todas las letras de una palabra
+        //como juntar la palabra(los espacios)
+        p1 = p1.replaceAll(" "," ");
+        System.out.println(p1);
+        for (int i = 0; i < p1.length()-1; i++) {
+        }
+        System.out.println("El numero de letras es; "+ p1.length());
 
     }
 }

@@ -11,7 +11,9 @@ public class EjerFor {
         //ejer5();
         //ejer6();
         //ejer7();
-        ejer11();
+        //ejer11();
+        //ejer13();
+        ejer14();
     }
 
     public static void ejer1() {
@@ -112,41 +114,43 @@ public class EjerFor {
         Random aleatorio = new Random();
 
         for (int i = 1; i <= lanzarDado; i++) {
-            int numeroAleatorio = aleatorio.nextInt(6)+1;
+            int numeroAleatorio = aleatorio.nextInt(6) + 1;
             System.out.printf("%d --> %d\n", i, numeroAleatorio);
         }
     }
-    public static void ejer8(){
-        int acumuladorPositivos =0, acumuladorNegativos =0, numeroCeros=0;
-        int numeroPositivos=0, numeroNegativos=0;
-        for(int i = 0; i<10; i++) {
+
+    public static void ejer8() {
+        int acumuladorPositivos = 0, acumuladorNegativos = 0, numeroCeros = 0;
+        int numeroPositivos = 0, numeroNegativos = 0;
+        for (int i = 0; i < 10; i++) {
             System.out.println("Introduce el numero que quieres;");
             int numero = teclado.nextInt();
 
-            if ( numero> 0) {
+            if (numero > 0) {
                 acumuladorPositivos += numero;
                 numeroPositivos++;
-            } else if (numero<0) {
+            } else if (numero < 0) {
                 acumuladorNegativos += numero;
                 numeroNegativos++;
             } else {
                 numeroCeros++;
             }
         }
-        System.out.println("La media de los positivos es " +(float) acumuladorPositivos / numeroPositivos);
-        System.out.println("La media de los negativos es "+(float) acumuladorNegativos/numeroNegativos);
-        System.out.println("El numero de ceros es; "+numeroCeros);
+        System.out.println("La media de los positivos es " + (float) acumuladorPositivos / numeroPositivos);
+        System.out.println("La media de los negativos es " + (float) acumuladorNegativos / numeroNegativos);
+        System.out.println("El numero de ceros es; " + numeroCeros);
     }
-    public static void ejer10(){
-        int numSS =0, numAP=0, numCD=0;
+
+    public static void ejer10() {
+        int numSS = 0, numAP = 0, numCD = 0;
         for (int i = 0; i < 6; i++) {
             System.out.println("Introduce la nota;");
             int nota = teclado.nextInt();
-            if (nota >=0 && nota <=10){
-                if (nota>4){
+            if (nota >= 0 && nota <= 10) {
+                if (nota > 4) {
                     numAP++;
-                } else if (nota>4) {
-                   numSS++;
+                } else if (nota > 4) {
+                    numSS++;
                 } else {
                     numCD++;
                 }
@@ -154,19 +158,20 @@ public class EjerFor {
                 System.out.println("Nota invalida");
             }
         }
-        System.out.println("El numero de AP es; "+ numAP);
-        System.out.println("El numero de SS es; "+ numSS);
-        System.out.println("El numero de CD es; "+ numCD);
+        System.out.println("El numero de AP es; " + numAP);
+        System.out.println("El numero de SS es; " + numSS);
+        System.out.println("El numero de CD es; " + numCD);
     }
-    public static void ejer11(){
+
+    public static void ejer11() {
         System.out.println("De que cuadrado lo quieres; ");
         int lado = teclado.nextInt();
-        for(int i = 0; i<lado; i++){
+        for (int i = 0; i < lado; i++) {
             //System.out.println("\t+\t");
             for (int j = 0; j < lado; j++) {
-                if (i == 0 || i == lado -1){
+                if (i == 0 || i == lado - 1) {
                     System.out.print("\t+\t");
-                } else if (j == 0 || j ==lado-1) {
+                } else if (j == 0 || j == lado - 1) {
                     System.out.print("\t+\t");
                 }
                 System.out.print("\t\t");
@@ -174,6 +179,40 @@ public class EjerFor {
             System.out.println();
         }
     }
+
+    public static void ejer13() {
+        System.out.println("Introduce un palabra:");
+        String p1 = teclado.next();
+        for (int i = p1.length() - 1; i >= 0; i--) {
+            System.out.print(p1.charAt(i));
+        }
+
+
+    }
+
+    public static void ejer14() {
+        System.out.println("Introduce un palabra:");
+        String p1 = teclado.next();
+        //no se tienen en cuenta las mayusculas
+        p1.toLowerCase().replaceAll("á", "a")
+                        .replaceAll("é", "e")
+                        .replaceAll("í", "i")
+                        .replaceAll("ó", "o")
+                        .replaceAll("ú", "u");
+        String p1Inverss ="";
+
+        for (int i = p1.length() - 1; i >= 0; i--) {
+            p1Inverss += p1.charAt(i);
+
+        }
+        if (p1.equals(p1Inverss)){
+            System.out.println("Son palindormos");
+        }else {
+            System.out.println("No so palindomos");
+    }
+
+
+}
 
 
 }
