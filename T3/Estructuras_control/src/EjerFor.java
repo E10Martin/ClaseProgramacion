@@ -13,7 +13,8 @@ public class EjerFor {
         //ejer7();
         //ejer11();
         //ejer13();
-        ejer14();
+        //ejer14();
+        ejer15();
     }
 
     public static void ejer1() {
@@ -213,6 +214,21 @@ public class EjerFor {
 
 
 }
+    public static void ejer15(){
+        System.out.println("Introduce una frase: ");
+        String frase = teclado.nextLine();
+        /*frase.toLowerCase().replaceAll("á", "a")
+                .replaceAll("é", "e")
+                .replaceAll("í", "i")
+                .replaceAll("ó", "o")
+                .replaceAll("ú", "u")
+                .replaceAll("!", ".");*/
+        frase= frase.toLowerCase().replaceAll(" ","");
+        for (int i = frase.length(); i < frase.length() -1  ; i++) {
+
+        }
+        System.out.println(frase.length());
 
 
+    }
 }
