@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class EjerFor {
     static Scanner teclado = new Scanner(System.in);
+    static Random aleatorio = new Random();
 
     public static void main(String[] args) {
         //ejer1();
@@ -14,7 +15,9 @@ public class EjerFor {
         //ejer11();
         //ejer13();
         //ejer14();
-        ejer15();
+        //ejer15();
+        //ejer16();
+        ejer17();
     }
 
     public static void ejer1() {
@@ -214,6 +217,31 @@ public class EjerFor {
 
 
 }
+     public static void ejer14v2(){
+         System.out.println("Introduce un palabra:");
+         String p1 = teclado.next();
+         //no se tienen en cuenta las mayusculas
+         p1.toLowerCase().replaceAll("á", "a")
+                 .replaceAll("é", "e")
+                 .replaceAll("í", "i")
+                 .replaceAll("ó", "o")
+                 .replaceAll("ú", "u")
+                 .replaceAll(" ", "");
+         String p1Inverss = "";
+         boolean palindromo = true;
+         for (int i = 0; i <p1.length()/2 ; i--) {
+             if (p1.charAt(i) != p1.charAt(p1.length()-1-i)){
+                 palindromo = false;
+                 break;
+             }
+
+         }
+         if ( palindromo){
+             System.out.println("Tu palabra es palindromo");
+         } else {
+             System.out.println("Tu palabra no es palindromo");
+         }
+}
     public static void ejer15(){
         System.out.println("Introduce una frase: ");
         String frase = teclado.nextLine();
@@ -223,12 +251,59 @@ public class EjerFor {
                 .replaceAll("ó", "o")
                 .replaceAll("ú", "u")
                 .replaceAll("!", ".");*/
-        frase= frase.toLowerCase().replaceAll(" ","");
-        for (int i = frase.length(); i < frase.length() -1  ; i++) {
-
+        //numero de letras sin espacios ni puntos
+        int numLetrasSinCosas= frase.toLowerCase().replaceAll(" ","")
+                                  .replaceAll(".","").length();
+        //numero oraciones
+        int numOraciones = 0;
+        int numeroPalabras = 0;
+        for (int i = 0; i < frase.length(); i++) {
+            if(frase.charAt(i)== '.'){
+                numOraciones++;
+            } else if (frase.charAt(i)== ' ') {
+                numeroPalabras++;
+            }
         }
-        System.out.println(frase.length());
+        System.out.printf("Numero frases "+ numOraciones);
+        System.out.printf("Numero palabras "+ numeroPalabras);
+        System.out.printf("NUmero letas "+ frase.length());
+        System.out.printf("Numero letras sin cosas "+ numLetrasSinCosas);
 
+    }
+    public static void ejer16(){
+        //Generar un numero entre 1y30
+        int numAleatorio = aleatorio.nextInt(30)+1;
+        int numIntentos = 0;
+        int numeroIntentosMax = 10;
 
+        for (int i = 0; i < numeroIntentosMax ; i++) {
+            System.out.println("Otro intento");
+            int numero = teclado.nextInt();
+            numIntentos++;
+
+            if (numAleatorio != numero) {
+
+            } else if (numAleatorio == numero){
+                System.out.printf("Has adivinado el numero en %d intentos.", numIntentos);
+                break;
+            }
+            if (numeroIntentosMax == numIntentos){
+                System.out.printf("lo siento, agotaste el numero de intentos, el numero era %d.",numAleatorio );
+            }
+        }
+
+    }
+    public static void ejer17(){
+        System.out.println("Dime que numero quieres calcular el factorial; ");
+        int num = teclado.nextInt();
+        int factorial = 1;
+        if (num<1){
+            System.out.printf("No puedo calcular el factorial.");
+        } else {
+            for (int i = 1; i <=num ; i++) {
+                factorial = factorial*i;
+            }
+            System.out.printf("El factorial del numero %d es %d ", num, factorial);
+        }
     }
 }
