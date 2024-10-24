@@ -6,7 +6,8 @@ public class EjerWhile {
     static Random aleatorio =  new Random();
 
     public static void main(String[] args) {
-        ejer5();
+        //ejer5();
+        //ejer7();
     }
     public static void ejer5(){
         String repetir;
@@ -35,5 +36,36 @@ public class EjerWhile {
         System.out.println("Se acabo");
 
     }
-    public static void ejer
+    public static void ejer7(){
+        int numero;
+        do{
+            System.out.println("Opcion 1:");
+            System.out.println("Opcion 2:");
+            System.out.println("Opcion 3:");
+            System.out.println("Opcion 4:");
+            System.out.println("Salir(5):");
+            numero = teclado.nextInt();
+            if (numero >=6){
+                System.out.println("Opcion no contemplada");
+            }
+            switch (numero){
+                case 1:
+                    System.out.println("Ejecutando opcion 1");
+                    break;
+                case 2:
+                    System.out.println("Ejecutando opcion 2");
+                    break;
+                case 3:
+                    System.out.println("Ejecutando opcion 3");
+                    break;
+                case 4:
+                    System.out.println("Ejecutando opcion 4");
+                    break;
+                case 5:
+                    System.out.println("Saliendo");
+                    break;
+            }
+        } while(numero != 5 );
+    }
+    
 }
