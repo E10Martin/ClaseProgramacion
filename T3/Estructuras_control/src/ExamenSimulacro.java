@@ -112,14 +112,29 @@ public class ExamenSimulacro {
                      }
                     break;
                 case 2:
+                    System.out.println("Dime el pin de la cuenta");
+                    pinUsuario = teclado.nextInt();
+                    if (pinUsuario==PIN){
+                        System.out.println("Que cantidad quieres sacar");
+                        int cantidad = teclado.nextInt();
+                        if (cantidad>0 && saldo>=cantidad){
+                            saldo-=cantidad;
+                            System.out.println("Saldo actualizado");
+                        } else {
+                            System.out.println("Cantidad invalida");
+                        }
+                    } else {
+                        System.out.println("No es el pin");
+                    }
                     break;
                 case 3:
                     System.out.println("El saldo de a cuenta es: "+ saldo);
                     break;
                 case 4:
+                    System.out.println("Opcion no valida");
                     break;
             }
-        } while (opcion != 4)
+        } while (opcion != 4);
     }
 
     public static void ejer4() {
@@ -158,7 +173,7 @@ public class ExamenSimulacro {
         int numero = 0;
         int acumuladorPares = 0, acumuladorImpares = 0;
         int incrementadorPares = 0, incrementadorImpares = 0, incrementadorCeros = 0;
-        while (numero) {
+        while (numero >-1) {
             System.out.println("Introduce un numero:");
             numero = teclado.nextInt();
             if (numero > -1) {
