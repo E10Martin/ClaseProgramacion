@@ -5,8 +5,8 @@ public class Ejer1 {
 
     public static void main(String[] args) {
 
-         int n1;
-        int n2;
+         float n1;
+        float n2;
         do {
 
             System.out.println("Introduce un numero: ");
@@ -28,16 +28,16 @@ public class Ejer1 {
                     opcion = teclado.nextInt();
                     switch (opcion) {
                         case 1:
-                            System.out.println("La suma de los numeros es: " + (n1 + n2));
+                            System.out.println("La suma de los numeros es: " +(int) (n1 + n2));
                             break;
                         case 2:
-                            System.out.println("La resta de los numeros es: " + (n1 - n2));
+                            System.out.println("La resta de los numeros es: " +(int) (n1 - n2));
                             break;
                         case 3:
-                            System.out.println("La multiplicacion es: " + (n1 * n2));
+                            System.out.println("La multiplicacion es: " +(int) (n1 * n2));
                             break;
                         case 4:
-                            System.out.println("La division es: " +(float)(n1 / n2));
+                            System.out.println("La division es: " +(n1 / n2));
                             break;
                         case 5:
                             System.out.println("Preparando otros numeros.");

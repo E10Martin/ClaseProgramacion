@@ -8,9 +8,9 @@ public class Ejer2 {
     public static void main(String[] args) {
         System.out.println("Introduce un numero: ");
         int numeroUsuario = teclado.nextInt();
-        int acumuladorNUmeros = 0;
+        float acumuladorNUmeros = 0;
         int numeroAleatorio = 0;
-        int sumaTotal = 0;
+        float sumaTotal = 0;
 
 
         for (int i = 0; i < 10; i++) {
@@ -20,14 +20,14 @@ public class Ejer2 {
             sumaTotal += numeroAleatorio;
 
         }
-        System.out.println("Numero medio generado; " + (float) (sumaTotal / acumuladorNUmeros));
-        System.out.println("La suma de todos los numeros; " + sumaTotal);
+        System.out.println("Numero medio generado; " +  (sumaTotal / acumuladorNUmeros));
+        System.out.println("La suma de todos los numeros; " +(int) sumaTotal);
 
         boolean iguales = false;
         if (numeroAleatorio == numeroUsuario) {
             iguales = true;
         }
-        System.out.println("Maximo: ");
+
         if (iguales) {
             System.out.println("El número " + numeroUsuario + " está entre los números.");
         } else {
