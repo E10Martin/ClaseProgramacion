@@ -28,7 +28,7 @@ public class Ejer2 {
             iguales = true;
         }
 
-        if (iguales) {
+        if (iguales == true) {
             System.out.println("El número " + numeroUsuario + " está entre los números.");
         } else {
             System.out.println("El número " + numeroUsuario + " no está entre los números.");
