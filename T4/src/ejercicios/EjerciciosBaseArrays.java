@@ -26,6 +26,22 @@ public class EjerciciosBaseArrays {
     }
 
     public static void ejer2(){
+        //2. Crear un programa que genere 30 números aleatorios entre 0 - 10 y los guarde en un array. Una vez metidos, se deberá mostrar:
+        //    - Numero de puntos obtenidos
+        //    - Media de puntos obtenidos
+        int numeros[] = new int [30];
+        int sumaTotal = 0;
+        for (int i = 0; i < 30; i++) {
+            int numerosAleatorios = aleatorio.nextInt(10)+1;
+            numeros[i] = numerosAleatorios;
+            sumaTotal += numeros[i];
+        }
+        for (int i = 0; i < numeros.length; i++) {
+            System.out.printf("%d\n", numeros[i]);
+
+        }
+        System.out.println("Numero de puntos obtenidos; "+ sumaTotal);
+        System.out.printf("Media de puntos obtenidos; "+(double) sumaTotal/30);
 
     }
 
