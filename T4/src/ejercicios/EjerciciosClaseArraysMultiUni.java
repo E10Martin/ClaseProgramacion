@@ -3,7 +3,7 @@ package ejercicios;
 import java.util.Random;
 import java.util.Scanner;
 
-public class EjerciciosBaseArraysMultiUni {
+public class EjerciciosClaseArraysMultiUni {
     static Scanner teclado = new Scanner(System.in);
     static Random aleatorio = new Random();
 
