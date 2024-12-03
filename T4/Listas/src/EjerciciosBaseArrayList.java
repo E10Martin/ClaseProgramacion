@@ -34,7 +34,7 @@ public class EjerciciosBaseArrayList {
     }
     public static void ejer2(){
         ArrayList<Integer>listaNumeros = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
+        for  (int i = 0; i < 10; i++) {
             int numeroAleatorio = aleatorio.nextInt(101);
             listaNumeros.add(numeroAleatorio);
         }
