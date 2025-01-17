@@ -51,10 +51,29 @@ public class Coche {
         System.out.println("El n bastidor es: "+ this.bastidor);
         System.out.println("La matricula es: "+ this.matricula);
         System.out.println("El precio es: "+ this.precio);
+        System.out.println();
     }
 
     //metodos especiales
+
+    public String getMarca(){
+        return this.marca;
+    }
     public void setMarca(String marca){
         this.marca = marca;
+    }
+
+    public String getModelo(){
+        return this.modelo;
+    }
+    public void setModelo(String modelo){
+        this.modelo = modelo;
+    }
+
+    public int getCv(){
+        return this.cv;
+    }
+    public void setCv(int cv) {
+        this.cv = cv;
     }
 }
