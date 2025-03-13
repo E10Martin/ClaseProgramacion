@@ -25,4 +25,17 @@ public class Centro {
             paciente.mostrarPersona();
         }
     }
+
+    public void anadirDoctor(Doctor doctor){
+        listaDoctores.add(doctor);
+        System.out.println("Paciente "+ doctor.getNombre()+" añadido");
+    }
+
+    public void mostrarDoctor(){
+        System.out.println("Los doctores en el centro Hospital: ");
+        for (Doctor doctor:listaDoctores) {
+            doctor.mostrarPersona();
+        }
+
+    }
 }
