@@ -17,5 +17,7 @@ public class Entrada {
         //- Si quieres, puedes crear una clase controller que sea la que gestiona la construcción de la clase/terreno/piscina llamada Constructora
         //
         //Saltar excepciones personalizadas en todos squellos casos en los que la acción no se pueda llevar a cabo, como por ejemplo  construir una habitació con m2 superiores a los disponibles
+
+
     }
 }
