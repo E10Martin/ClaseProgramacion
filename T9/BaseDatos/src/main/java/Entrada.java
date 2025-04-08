@@ -1,15 +1,22 @@
 import database.DBConnector;
-import dto.UsuarioDT0;
+import dto.UsuarioDTO;
 import model.Usuario;
+
+import java.sql.Connection;
 
 public class Entrada {
     public static void main(String[] args) {
-        /*DBConnector dbConnector = new DBConnector();
-        dbConnector.createConnection();*/
+        DBConnector dbConnector = new DBConnector();
+        dbConnector.createConnection();
 
-        UsuarioDT0 usuarioDT0 = new UsuarioDT0();
-        Usuario usuario = new Usuario(3,"Martin","Ruiz","martin@ces","Si",10,1000);
+
+        UsuarioDTO usuarioDT0 = new UsuarioDTO();
+        Usuario usuario = new Usuario(3,"Martin","Ruiz","martin@ces","si",0,0);
         usuarioDT0.insertarUsuarios(usuario);
+
+
+        //System.out.println("El numero de despidos es de "+usuarioDT0.borrarUsuario(5000000));
+
 
     }
 }
