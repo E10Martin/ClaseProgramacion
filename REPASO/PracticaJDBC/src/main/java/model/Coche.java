@@ -9,7 +9,7 @@ import lombok.*;
 public class Coche {
 
     private int id;
-    private String marca, modelo, color;
+    private String marca, modelo, color, matricula;
     private  int precio;
     
     public void mostrarDatos(){
@@ -17,6 +17,7 @@ public class Coche {
         System.out.println("marca = " + marca);
         System.out.println("modelo = " + modelo);
         System.out.println("color = " + color);
+        System.out.println("matricula = " + matricula);
         System.out.println("precio = " + precio);
     }
 }

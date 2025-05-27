@@ -2,7 +2,7 @@ package databse;
 
 public interface SchemaDB {
 
-    String DB_Name = "concesionario_ces";
+    String DB_Name = "pasajeros_ces";
     String TAB_USER = "coches";
     String COL_ID = "id";
     String COL_MARCA = "marca";

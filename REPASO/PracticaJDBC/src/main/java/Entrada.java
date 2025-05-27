@@ -1,3 +1,6 @@
+import dto.CocheDTO;
+import model.Coche;
+
 import java.util.Scanner;
 
 public class Entrada {
@@ -5,7 +8,11 @@ public class Entrada {
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
+        ;
 
+        //Connection connection = DBConnection.getConnection();
+        Coche coche = new Coche();
+        CocheDTO cocheDTO = new CocheDTO();
         int opcion;
         do {
             System.out.println("1. Agregar coche");
@@ -17,12 +24,42 @@ public class Entrada {
             opcion = scanner.nextInt();
             switch (opcion) {
                 case 1:
+                    System.out.println("Inserta el coche que qieres agregar; ");
+                    System.out.println("ID");
+                    int id = scanner.nextInt();
+                    System.out.println("Marca");
+                    String marca = scanner.nextLine();
+                    System.out.println("Modelo");
+                    String modelo = scanner.nextLine();
+                    System.out.println("Color");
+                    String color = scanner.nextLine();
+                    System.out.println("Matricula");
+                    String matricula = scanner.next();
+                    System.out.println("Precio");
+                    int precio = scanner.nextInt();
+
+                    cocheDTO.insertarCoches(new Coche(id, marca, modelo, color, matricula, precio));
+
                     break;
                 case 2:
+                    System.out.println("Que coche deseas borrar, pon su id; ");
+                    int borrarId = scanner.nextInt();
+
+                    cocheDTO.borrarCochePorId(borrarId);
                     break;
                 case 3:
+                    System.out.println("Introduce el id que quires ver; ");
+                    int consultarId = scanner.nextInt();
+
+                    Coche cocheConsultado = cocheDTO.consultarCochePorId(consultarId);
+                    if (cocheConsultado != null) {
+                        cocheConsultado.mostrarDatos();
+                    } else {
+                        System.out.println("No se encontro nigun coche");
+                    }
                     break;
                 case 4:
+                    cocheDTO.listarCoches();
                     break;
                 case 5:
                     System.out.print("Saliendo...");
@@ -30,5 +67,6 @@ public class Entrada {
 
             }
         } while (opcion != 5);
+
     }
 }
